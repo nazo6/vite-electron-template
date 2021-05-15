@@ -1,0 +1,17 @@
+{
+  "name": "vite-electron-template",
+  "author": "nazo",
+  "scripts": {
+    "dev": "run-p renderer:serve main:dev",
+    "build": "run-p renderer:build main:build",
+    "renderer:serve": "cd renderer && pnpm serve",
+    "renderer:build": "cd renderer && pnpm build",
+    "main:dev": "cd main && pnpm dev",
+    "main:build": "cd main && pnpm build"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.3.0"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "main",
+  "main": "index.js",
+  "scripts": {
+    "dev": "run-p watch electron",
+    "watch": "esbuild main.ts preload.ts --define:process.env.isDev='true' --format=cjs --platform=node --sourcemap --watch --outdir='../dist/dev'",
+    "build": "esbuild main.ts preload.ts --bundle --platform=node --minify --outdir='../dist/prod'",
+    "electron": "electron ../dist/dev/main.js"
+  },
+  "devDependencies": {
+    "@types/node": "^15.3.0",
+    "electron": "^12.0.7",
+    "esbuild": "^0.11.21"
+  }
+}
