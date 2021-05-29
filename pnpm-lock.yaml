@@ -15,11 +15,13 @@ importers:
       '@types/node': ^15.6.1
       electron: ^13.0.1
       electron-builder: ^22.10.5
+      electronmon: ^2.0.1
       esbuild: ^0.12.5
     devDependencies:
       '@types/node': 15.6.1
       electron: 13.0.1
       electron-builder: 22.10.5
+      electronmon: 2.0.1
       esbuild: 0.12.5
 
   renderer:
@@ -852,6 +854,14 @@ packages:
       supports-color: 5.5.0
     dev: true
 
+  /chalk/3.0.0:
+    resolution: {integrity: sha512-4D3B6Wf41KOYRFdszmDqMCGq5VV/uMAB273JILmO+3jAlh8X4qDtdtgCR3fxtbLEMzSx22QdhnDcJvu2u1fVwg==}
+    engines: {node: '>=8'}
+    dependencies:
+      ansi-styles: 4.3.0
+      supports-color: 7.2.0
+    dev: true
+
   /chalk/4.1.1:
     resolution: {integrity: sha512-diHzdDKxcU+bAsUboHLPEDQiw0qEe0qd7SYUn3HgcFlWgbDcfLGswOHYeGrHKzG9z6UYf01d9VFMfZxPM1xZSg==}
     engines: {node: '>=10'}
@@ -1228,6 +1238,17 @@ packages:
       extract-zip: 1.7.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /electronmon/2.0.1:
+    resolution: {integrity: sha512-ircyGO6PLlJJ8fmfDTMbdJedzScRHI96AnLkRz8ezpmaz5Nh5wUI/D/h35R8VZxRwKAII/w3whRpaXyO1/SgXg==}
+    engines: {node: '>=10.0.0'}
+    hasBin: true
+    dependencies:
+      chalk: 3.0.0
+      import-from: 3.0.0
+      runtime-required: 1.0.2
+      watchboy: 0.4.3
     dev: true
 
   /emoji-regex/7.0.3:
@@ -1735,6 +1756,13 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
+  /import-from/3.0.0:
+    resolution: {integrity: sha512-CiuXOFFSzkU5x/CR0+z7T91Iht4CXgfCxVOFRhh2Zyhg5wOpWvvDLQUsWl+gcN+QscYBjez8hDCt85O7RLDttQ==}
+    engines: {node: '>=8'}
+    dependencies:
+      resolve-from: 5.0.0
+    dev: true
+
   /import-lazy/2.1.0:
     resolution: {integrity: sha1-BWmOPUXIjo1+nZLLBYTnfwlvPkM=}
     engines: {node: '>=4'}
@@ -2025,6 +2053,10 @@ packages:
       strip-bom: 3.0.0
     dev: true
 
+  /lodash.difference/4.5.0:
+    resolution: {integrity: sha1-nMtOUF1Ia5FlE0V3KIWi3yf9AXw=}
+    dev: true
+
   /lodash/4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
     dev: true
@@ -2157,6 +2189,13 @@ packages:
       resolve: 1.20.0
       semver: 7.3.5
       validate-npm-package-license: 3.0.4
+    dev: true
+
+  /normalize-path/2.1.1:
+    resolution: {integrity: sha1-GrKLVW4Zg2Oowab35vogE3/mrtk=}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      remove-trailing-separator: 1.1.0
     dev: true
 
   /normalize-url/4.5.1:
@@ -2318,6 +2357,11 @@ packages:
   /pify/3.0.0:
     resolution: {integrity: sha1-5aSs0sEB/fPZpNB/DbxNtJ3SgXY=}
     engines: {node: '>=4'}
+    dev: true
+
+  /pify/4.0.1:
+    resolution: {integrity: sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==}
+    engines: {node: '>=6'}
     dev: true
 
   /plist/3.0.2:
@@ -2492,9 +2536,23 @@ packages:
       rc: 1.2.8
     dev: true
 
+  /remove-trailing-separator/1.1.0:
+    resolution: {integrity: sha1-wkvOKig62tW8P1jg1IJJuSN52O8=}
+    dev: true
+
   /require-directory/2.1.1:
     resolution: {integrity: sha1-jGStX9MNqxyXbiNE/+f3kqam30I=}
     engines: {node: '>=0.10.0'}
+    dev: true
+
+  /resolve-from/4.0.0:
+    resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
+    engines: {node: '>=4'}
+    dev: true
+
+  /resolve-from/5.0.0:
+    resolution: {integrity: sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==}
+    engines: {node: '>=8'}
     dev: true
 
   /resolve/1.20.0:
@@ -2547,6 +2605,13 @@ packages:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
     dependencies:
       queue-microtask: 1.2.3
+    dev: true
+
+  /runtime-required/1.0.2:
+    resolution: {integrity: sha512-pYR+fg0jG2MYXjmY3JcVGSPI224O4b2O9StwRmY3VU9WnTSSXaSn/WiWD2wicYBo53rVjg2yRr2dr08aFtHSsQ==}
+    engines: {node: '>=4.0.0'}
+    dependencies:
+      resolve-from: 4.0.0
     dev: true
 
   /safe-buffer/5.1.2:
@@ -2961,6 +3026,13 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
+  /unixify/1.0.0:
+    resolution: {integrity: sha1-OmQcjC/7zk2mg6XHDwOkYpQMIJA=}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      normalize-path: 2.1.1
+    dev: true
+
   /update-notifier/5.1.0:
     resolution: {integrity: sha512-ItnICHbeMh9GqUy31hFPrD1kcuZ3rpxDZbf4KUDavXwS0bW5m7SLbDQpGX3UYr072cbrF5hFUs3r5tUsPwjfHw==}
     engines: {node: '>=10'}
@@ -3042,6 +3114,16 @@ packages:
       rollup: 2.50.3
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
+
+  /watchboy/0.4.3:
+    resolution: {integrity: sha512-GHs1HxwvxSMBsqd/WfTOZhj5gBdMqf5HQpfgtKxDfZRxrlYPDdVLRB61LCeRzJaWANmvSIMlfmRVDwVmJFgAKA==}
+    engines: {node: '>=8.0.0'}
+    dependencies:
+      lodash.difference: 4.5.0
+      micromatch: 4.0.4
+      pify: 4.0.1
+      unixify: 1.0.0
     dev: true
 
   /which-boxed-primitive/1.0.2:

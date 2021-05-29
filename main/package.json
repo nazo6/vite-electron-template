@@ -6,14 +6,20 @@
     "watch": "esbuild main.ts preload.ts --bundle --external:electron --define:process.env.isDev='true' --format=cjs --platform=node --sourcemap --watch --outdir='../dist/dev'",
     "build": "esbuild main.ts preload.ts --bundle --external:electron --format=cjs --platform=node --minify --outdir='../dist/prod'",
     "build:electron": "electron-builder build",
-    "electron": "electron ../dist/dev/main.js",
+    "electron": "cd ../dist/dev && electronmon ./main.js",
     "lint": "eslint .",
     "format": "eslint --fix . && prettier --write ."
+  },
+  "electronmon": {
+    "patterns": [
+      "**/*"
+    ]
   },
   "devDependencies": {
     "@types/node": "^15.6.1",
     "electron": "^13.0.1",
     "electron-builder": "^22.10.5",
+    "electronmon": "^2.0.1",
     "esbuild": "^0.12.5"
   }
 }
