@@ -1,6 +1,5 @@
 {
   "appId": "tk.nazo6.viteelectrontemplate",
-  "asar": false,
   "files": [
     {
       "from": "../dist/prod",
