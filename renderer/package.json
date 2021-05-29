@@ -3,7 +3,9 @@
   "main": "index.js",
   "scripts": {
     "serve": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "lint": "eslint ./src",
+    "format": "eslint --fix ./src && prettier --write ."
   },
   "devDependencies": {
     "@types/react": "^17.0.8",

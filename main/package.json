@@ -6,7 +6,9 @@
     "watch": "esbuild main.ts preload.ts --define:process.env.isDev='true' --format=cjs --platform=node --sourcemap --watch --outdir='../dist/dev'",
     "build": "esbuild main.ts preload.ts --format=cjs --platform=node --minify --outdir='../dist/prod'",
     "build:electron": "electron-builder build",
-    "electron": "electron ../dist/dev/main.js"
+    "electron": "electron ../dist/dev/main.js",
+    "lint": "eslint .",
+    "format": "eslint --fix . && prettier --write ."
   },
   "devDependencies": {
     "@types/node": "^15.6.1",
