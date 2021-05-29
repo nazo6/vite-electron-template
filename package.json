@@ -3,7 +3,9 @@
   "author": "nazo6",
   "scripts": {
     "dev": "run-p renderer:serve main:dev",
-    "build": "run-p renderer:build main:build",
+    "build": "run-s build:source build:electron",
+    "build:electron": "cd main && pnpm build:electron",
+    "build:source": "run-p renderer:build main:build",
     "renderer:serve": "cd renderer && pnpm serve",
     "renderer:build": "cd renderer && pnpm build",
     "main:dev": "cd main && pnpm dev",

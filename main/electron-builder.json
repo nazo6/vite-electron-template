@@ -1,0 +1,18 @@
+{
+  "appId": "tk.nazo6.viteelectrontemplate",
+  "asar": false,
+  "files": [
+    {
+      "from": "../dist/prod",
+      "to": ".",
+      "filter": "**/*"
+    },
+    "package.json"
+  ],
+  "directories": {
+    "output": "../release"
+  },
+  "extraMetadata": {
+    "main": "main.js"
+  }
+}
