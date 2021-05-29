@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "run-p watch electron",
-    "watch": "esbuild main.ts preload.ts --define:process.env.isDev='true' --format=cjs --platform=node --sourcemap --watch --outdir='../dist/dev'",
-    "build": "esbuild main.ts preload.ts --format=cjs --platform=node --minify --outdir='../dist/prod'",
+    "watch": "esbuild main.ts preload.ts --bundle --external:electron --define:process.env.isDev='true' --format=cjs --platform=node --sourcemap --watch --outdir='../dist/dev'",
+    "build": "esbuild main.ts preload.ts --bundle --external:electron --format=cjs --platform=node --minify --outdir='../dist/prod'",
     "build:electron": "electron-builder build",
     "electron": "electron ../dist/dev/main.js",
     "lint": "eslint .",
